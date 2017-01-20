@@ -1,15 +1,15 @@
 <songsPlaylist>
-  <song songID="1" songPrice="0.99"><!-- Metadata of the song -->
+  <song songId="1" songPrice="0.99"><!-- Metadata of the song -->
       <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName><!-- attributes of the band-->
       <songName songType="Single" songGenre="Metalcore">A Match Made In Heaven</songName><!--attributes of the song-->
       <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum><!--attributes of the song-->
   </song>
-  <song songID="2" songPrice="0.99">
+  <song songId="2" songPrice="0.99">
       <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName>
       <songName songType="Regular" songGenre="Metalcore">Nihilist</songName>
       <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum>
   </song>
-  <song songID="3", songPrice="0.99">
+  <song songId="3", songPrice="0.99">
       <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName>
       <songName songType="Regular" songGenre="Metalcore">Memento Mori</songName>
       <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum>
