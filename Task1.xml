@@ -1,17 +1,28 @@
-<songsPlaylist>
-  <song songId="1" songPrice="0.99"><!-- Metadata of the song -->
-      <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName><!-- attributes of the band-->
-      <songName songType="Single" songGenre="Metalcore">A Match Made In Heaven</songName><!--attributes of the song-->
-      <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum><!--attributes of the song-->
-  </song>
-  <song songId="2" songPrice="0.99">
-      <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName>
-      <songName songType="Regular" songGenre="Metalcore">Nihilist</songName>
-      <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum>
-  </song>
-  <song songId="3" songPrice="0.99">
-      <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName>
-      <songName songType="Regular" songGenre="Metalcore">Memento Mori</songName>
-      <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum>
-  </song>
-</songsPlaylist>
+<?xml version="1.0" ?>
+
+<!DOCTYPE songsPlaylist [
+<!ELEMENT songsPlaylist (song)>
+<!ELEMENT song (bandName, songName, songAlbum)>
+<!ELEMENT bandName (#PCDATA)>
+<!ELEMENT songName (#PCDATA)>
+<!ELEMENT songAlbum (#PCDATA)>
+]>
+
+<sp:songsPlaylist xmlns:sp="https://randomwebsite.lt/songsPlaylist"
+                  xmlns:s="https://randomwebsite.lt/song">
+  <s:song songId="1" songPrice="0.99"><!-- Metadata of the song -->
+      <s:bandName bandVocalist="Sam Carter" country="Great Britain">Architects</s:bandName><!-- attributes of the band-->
+      <s:songName songType="Single" songGenre="Metalcore">A Match Made In Heaven</s:songName><!--attributes of the song-->
+      <s:songAlbum albumYear="2016">All Our God Has Abandoned Us</s:songAlbum><!--attributes of the song-->
+  </s:song>
+  <s:song songId="2" songPrice="0.99">
+      <s:bandName bandVocalist="Sam Carter" country="Great Britain">Architects</s:bandName>
+      <s:songName songType="Regular" songGenre="Metalcore">Nihilist</s:songName>
+      <s:songAlbum albumYear="2016">All Our God Has Abandoned Us</s:songAlbum>
+  </s:song>
+  <s:song songId="3" songPrice="0.99">
+      <s:bandName bandVocalist="Sam Carter" country="Great Britain">Architects</s:bandName>
+      <s:songName songType="Regular" songGenre="Metalcore">Memento Mori</s:songName>
+      <s:songAlbum albumYear="2016">All Our God Has Abandoned Us</s:songAlbum>
+  </s:song>
+</sp:songsPlaylist>
