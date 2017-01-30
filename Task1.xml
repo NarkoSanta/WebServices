@@ -1,13 +1,35 @@
-<<<<<<< HEAD
 <?xml version="1.0" ?>
 
-<!DOCTYPE songsPlaylist [
-<!ELEMENT songsPlaylist (song)>
-<!ELEMENT song (bandName, songName, songAlbum)>
-<!ELEMENT bandName (#PCDATA)>
-<!ELEMENT songName (#PCDATA)>
-<!ELEMENT songAlbum (#PCDATA)>
-]>
+<xs:schema xmlns:xs="random.website.com/xmlSchema">
+
+  <xs:attribute name="songId" type="xs:ID"/>
+  <xs:attribute name="songPrice" type="xs:decimal"/>
+
+  <xs:element name="songsPlaylist">
+
+    <xs:attribute name="bandVocalist" type="xs:string" minOccurs="0"/>
+    <xs:attribute name="country" type="xs:string"/>
+    <xs:attribute name="songType" type="xs:string">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Single"/>
+          <xs:enumeration value="Regular"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="songGenre" type="xs:string"/>
+    
+    <xs:element name="song">
+      <xs:complexType>
+        <xs:all>
+          <xs:element name="bandName" type="xs:string"/>
+          <xs:element name="songName" type="xs:string"/>
+          <xs:element name="songAlbum" type="xs:string">
+          </xs:element>
+        </xs:all>
+      </xs:complexType>
+    </xs:element>
+  </xs:element>
 
 <sp:songsPlaylist xmlns:sp="https://randomwebsite.lt/songsPlaylist"
                   xmlns:s="https://randomwebsite.lt/song">
@@ -27,22 +49,4 @@
       <s:songAlbum albumYear="2016">All Our God Has Abandoned Us</s:songAlbum>
   </s:song>
 </sp:songsPlaylist>
-=======
-<songsPlaylist>
-  <song songId="1" songPrice="0.99"><!-- Metadata of the song -->
-      <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName><!-- attributes of the band-->
-      <songName songType="Single" songGenre="Metalcore">A Match Made In Heaven</songName><!--attributes of the song-->
-      <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum><!--attributes of the song-->
-  </song>
-  <song songId="2" songPrice="0.99">
-      <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName>
-      <songName songType="Regular" songGenre="Metalcore">Nihilist</songName>
-      <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum>
-  </song>
-  <song songId="3", songPrice="0.99">
-      <bandName bandVocalist="Sam Carter" country="Great Britain">Architects</bandName>
-      <songName songType="Regular" songGenre="Metalcore">Memento Mori</songName>
-      <songAlbum albumYear="2016">All Our God Has Abandoned Us</songAlbum>
-  </song>
-</songsPlaylist>
->>>>>>> 0e31ab9048aa600be36d605a60d2fb9b1030aff9
+</xs:schema>
